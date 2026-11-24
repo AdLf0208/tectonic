@@ -1,0 +1,15 @@
+[package]
+# Port of Tectonic 3.0.32 (Apollounknowndev/tectonic, MIT), Minecraft Java 26.3.
+# Clean-room Rust rewrite of the mod's observed behaviour; local-only until publishing
+# is approved, publishable under MIT with this source.
+name = "tectonic"
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+description = "Tectonic for Horizon: carried terrain density data and density function types"
+publish = false
+
+[dependencies]
+# The pinned SDK's API crate only (registry rule R9: no other dependency, no [workspace],
+# no packed Cargo.lock).
+horizon-mod-api = { path = ".horizon/sdk/api/crates/horizon-mod-api" }
